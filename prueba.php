@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola como estas bien</h1>
+    <h1>pagina prueba
+    </h1>
 </body>
 </html>
