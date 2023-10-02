@@ -1,0 +1,170 @@
+@font-face {
+    font-family: letrapiola;
+    src: url(../dafonts/Honey\ Notes\ DEMO.ttf);
+}
+@font-face {
+    font-family: letrapiola2;
+    src: url(../dafonts/Owl\ Cute.ttf);
+}
+@font-face {
+    font-family: letrapiola3;
+    src: url(../dafonts/YummyFoodies-demo-Regular.ttf);
+}
+body {
+    font-family: letrapiola3;
+    background: linear-gradient(to bottom, #3498db, #2c3e50);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos del contenedor de inicio de sesión */
+.padre-login {
+    display: flex;
+    max-width: 800px;
+    background-color: #ffffff62;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilos del lado izquierdo (imagen) */
+.caja-login-left {
+    flex: 1;
+    padding: 50px;
+    background-color: #003d80;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-login-left img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos del lado derecho (formulario) */
+.caja-login-right {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.caja-login-right h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: letrapiola2;
+
+}
+
+/* Estilos de los campos de entrada */
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.input-container input {
+    text-align: center;
+    font-family: letrapiola2;
+    border: 2px solid transparent;
+    width: 18.2em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;   
+    background-color: #F3F3F3;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+.input-container input:hover,
+.input-container input:focus {
+  border: 4px solid #a6ec4a;
+  box-shadow: 0px 0px 0px 7px rgba(168, 236, 74, 0.2);
+  background-color: white;
+}
+/* Estilos del botón de inicio de sesión */
+.blogin {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.01em 6em;
+    border: mediumspringgreen solid 0.15em;
+    border-radius: 0.25em;
+    color: mediumspringgreen;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+    font-family: letrapiola2;
+}
+
+.blogin:hover {
+    background-color: #0056b3;
+}
+
+.blogin:active {
+    background-color: #003d80;
+}
+
+  .blogin p {
+    z-index: 1;
+  }
+  
+  .blogin:hover {
+    color: #212121;
+  }
+  
+  .blogin:active {
+    border-color: teal;
+  }
+  
+  .blogin::after, .blogin::before {
+    content: "";
+    position: absolute;
+    width: 12em;
+    aspect-ratio: 1;
+    background: mediumspringgreen;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .blogin::before {
+    left: 0;
+    transform: translateX(-9em);
+  }
+  
+  .blogin::after {
+    right: 0;
+    transform: translateX(9em);
+  }
+  
+  .blogin:hover:before {
+    transform: translateX(-0.5em);
+  }
+  
+  .blogin:hover:after {
+    transform: translateX(0.5em);
+  }
+  
+  .blogin:active:before,
+  .blogin:active:after {
+    background: teal;
+  }
+

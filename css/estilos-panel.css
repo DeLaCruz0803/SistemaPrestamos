@@ -1,0 +1,263 @@
+@font-face {
+    font-family: letrapiola;
+    src: url(../dafonts/Honey\ Notes\ DEMO.ttf);
+}
+@font-face {
+    font-family: letrapiola2;
+    src: url(../dafonts/Owl\ Cute.ttf);
+}
+@font-face {
+    font-family: letrapiola3;
+    src: url(../dafonts/YummyFoodies-demo-Regular.ttf);
+}
+
+/*  -------------------------- general ------------------------ */
+#cuerpo-panel{
+  width: 95%;
+  height: auto;
+  background-color: brown;
+  text-align: center;
+  margin-left: 5%;
+  color: white;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+#menu-panel{
+  z-index: 9999;
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  width: 20%;
+  height: 100vh;
+  background-color: #000000;
+  padding: 5px;
+}
+.linea{
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  border-radius: 100px;
+}
+
+/* --------------------------- toggle de menu ------------------------------------ */
+#toggle-panel{
+  width: 100%;
+  padding-top: 5px;
+  direction: rtl;
+}
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 5px;
+}
+    
+/* -------------------------------- usuario  ....................................*/
+#usuario-panel{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+#foto-usuario{
+    width: 40%;
+    height: auto;
+    border-radius: 100%;
+}
+#usuario-panel h5{
+    color: #7d8f86;
+}
+#usuario-panel h6{
+    color: #999e82;
+}
+
+/* ----------------------------------  el menu -------------------------------- */
+#menu{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  margin: 5px;
+  gap: 10px;
+}
+.link-menu{
+  padding: 4% 4% 4% 25%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bolder;
+  color: white;
+  border-left: 5px solid #696060;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+}
+.link-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#ff0000;
+  transform: translateX(-100%);
+  transition: all 0.2s;
+  z-index: -1;
+}
+.link-menu:hover:hover{
+  border-left: 5px solid #ff0000;
+  color: black;
+  text-align: right;
+}
+.link-menu:hover::before {
+  transform: translateX(0);
+  border-right: 100px solid #747474;
+}
+/* ----------------------------------- iconos --------------------------------------- */
+.pos{
+  font-size: 22px;
+}
+
+/* ---------------------------------- boton de salir --------------------------------- */
+.close-panel {
+  position: fixed; /* Fija el elemento */
+  bottom: 0; /* Lo coloca en la parte inferior */
+  left: 0; /* Lo coloca en la parte izquierda */
+  padding: 10px; /* Agrega un espacio de relleno para que no esté pegado al borde */
+}
+.Btn {
+ --black: #000000;
+ --ch-black: #141414;
+ --eer-black: #1b1b1b;
+ --night-rider: #2e2e2e;
+ --white: #ffffff;
+ --af-white: #f3f3f3;
+ --ch-white: #e1e1e1;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ width: 45px;
+ height: 45px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition-duration: .3s;
+ box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+ background-color: var(--night-rider);
+ margin: 5px;
+ margin-top: 20%;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 25px;
+}
+
+.sign svg path {
+  fill: var(--af-white);
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--af-white);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
